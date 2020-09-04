@@ -7,7 +7,6 @@ class MainController extends BaseController
   public function index()
   {
     helper('html');
-
     echo view('miIndicador/index', ['title' => 'Principal']);
   }
 
