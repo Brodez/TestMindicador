@@ -143,6 +143,11 @@
 
 	});
 
+	//Se buscar buscar el año por las fechas indicadas y cortarlsa en la fechas que inicia y donde fecha_termino_val
+
+	// [1990       [12-10-1990 				05-06-2020]      2020]
+	//Para esto usamos moment para comparaciones y hacer las consultas por año
+	//en el ejemplo anterior se uso 1990 y 2020 por ende son 30 consultas y debo compararlas con las fechas correspondientes (fecha inicio y termino pasadas por input)
 	$( "#indicadores" ).submit(function( e ) {
 		event.preventDefault();
 
@@ -181,8 +186,6 @@
 		}
 		// chartGrafica.destroy();
 		resetGrafica(chartGrafica, dias, valores);
-
-
 	});
 
 	function resetGrafica(chart, dias,valores){
