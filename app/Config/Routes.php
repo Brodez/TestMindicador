@@ -31,6 +31,14 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'MainController::index', ['as' => 'main']);
 $routes->get('/historico-uf', 'MainController::index_uf', ['as' => 'historico-uf']);
+$routes->get('/load', 'MainController::load_uf', ['as' => 'load-uf']);
+
+$routes->get('/api/uf/get', 'MainController::get_ufs', ['as' => 'get_ufs']);
+$routes->get('/api/uf/get/(:num)', 'MainController::get_uf/$1', ['as' => 'get_uf']);
+$routes->post('/api/uf/update', 'MainController::update_uf', ['as' => 'update_uf']);
+
+$routes->post('/uf/update', 'MainController::update_uf', ['as' => 'update_uf']);
+
 
 /**
  * --------------------------------------------------------------------
